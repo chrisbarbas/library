@@ -29,10 +29,6 @@
 
     --foreground: var(--clr-light);
     --background: var(--clr-dark);
-
-    footer img {
-        filter: invert(100%);
-    }
 }
 
 // <--- dark mode --->
@@ -82,6 +78,10 @@
 
     .sun:hover {
         color: var(--clr-secondary);
+    }
+
+    footer img {
+        filter: invert(100%);
     }
 }
 
@@ -162,11 +162,5 @@ footer {
         height: 1.1rem;
         margin-bottom: -2px;
         margin-left: 4px;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        background-color: red;
     }
 }

@@ -28,11 +28,6 @@
   --background: var(--clr-dark);
 }
 
-.darkmode footer img {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
 .dark-mode-toggle {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -79,6 +74,11 @@
 
 .darkmode .sun:hover {
   color: var(--clr-secondary);
+}
+
+.darkmode footer img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 body {
@@ -167,11 +167,5 @@ footer img {
   height: 1.1rem;
   margin-bottom: -2px;
   margin-left: 4px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: red;
-  }
 }
 /*# sourceMappingURL=style.css.map */
