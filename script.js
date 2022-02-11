@@ -116,13 +116,11 @@ function readCheck(e) {
     let bookIndex = item.parentElement.dataset.index;
     let readClass = item.className;
     if (readClass === 'read') {
-        console.log('red');
         item.className = 'not-read';
         item.textContent = 'not read';
         myLibrary[bookIndex].read = 'not read';
         updateLocal();
     } else {
-        console.log('blue');
         item.className = 'read';
         item.textContent = 'read';
         myLibrary[bookIndex].read = 'read';
