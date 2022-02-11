@@ -319,9 +319,12 @@ td {
     overflow-wrap: break-word;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 1rem;
 }
 
+th, td {
+    padding-left: 1rem;
+    padding-right: 2px;
+}
 th:first-child {
     width: 40%;
     max-width: 400px
@@ -377,5 +380,8 @@ footer {
     main {
         margin-left: -1rem;
         margin-right: 1rem;
+    }
+    th, td {
+        padding-left: 2px;
     }
 }

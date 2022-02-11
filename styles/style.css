@@ -340,7 +340,11 @@ td {
   overflow-wrap: break-word;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+th, td {
   padding-left: 1rem;
+  padding-right: 2px;
 }
 
 th:first-child {
@@ -400,6 +404,9 @@ footer img {
   main {
     margin-left: -1rem;
     margin-right: 1rem;
+  }
+  th, td {
+    padding-left: 2px;
   }
 }
 /*# sourceMappingURL=style.css.map */
