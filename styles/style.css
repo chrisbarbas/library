@@ -25,7 +25,7 @@
   --clr-dark: #333;
   --clr-primary: #bbb;
   --clr-secondary: #023e8a;
-  --clr-accent: rgb(161, 242, 253);
+  --clr-accent: rgb(255, 250, 244);
   --clr-toggle: #fca311;
   --foreground: var(--clr-light);
   --background: var(--clr-dark);
@@ -137,8 +137,8 @@ body {
           flex-direction: column;
   padding: 1rem;
   width: var(--mainsize);
-  -webkit-box-shadow: rgba(180, 180, 180, 0.19) 0px 10px 20px, rgba(163, 163, 163, 0.23) 0px 6px 6px;
-          box-shadow: rgba(180, 180, 180, 0.19) 0px 10px 20px, rgba(163, 163, 163, 0.23) 0px 6px 6px;
+  -webkit-box-shadow: rgba(180, 180, 180, 0.19) 0px 10px 20px, rgba(87, 87, 87, 0.23) 0px 6px 6px;
+          box-shadow: rgba(180, 180, 180, 0.19) 0px 10px 20px, rgba(87, 87, 87, 0.23) 0px 6px 6px;
 }
 
 main {
@@ -164,6 +164,17 @@ header,
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 1rem;
+}
+
+header h1 {
+  margin-bottom: -1.6rem;
+}
+
+header p {
+  margin-bottom: 2rem;
+  color: var(--clr-accent);
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .form-row {
@@ -223,7 +234,7 @@ header,
 }
 
 .error input {
-  border: 2px solid #d30c0c;
+  border: 1px solid #d30c0c;
 }
 
 .form-row button,
@@ -261,26 +272,83 @@ tr {
 }
 
 table {
+  margin-left: 1rem;
+  margin-right: 50px;
   width: 100%;
 }
 
-table button {
-  font-size: 0.8rem;
+table .read,
+table .not-read {
+  font-size: 0.9rem;
+  width: 4.2rem;
+  height: 2.3rem;
+  padding: 7px 28px;
+  margin-bottom: 3px;
+}
+
+table .not-read {
+  color: var(--clr-dark);
+  background-color: var(--clr-secondary);
+  line-height: 1;
+}
+
+table .read {
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
+}
+
+table .not-read:hover {
+  background-color: #bbb;
+}
+
+table .read:hover {
+  background-color: var(--clr-toggle);
+}
+
+table .delete-toggle {
+  font-size: 0.9rem;
   width: 4.2rem;
   height: 1.8rem;
   color: var(--clr-light);
   background-color: #f44336;
   padding: 7px 28px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
-table button:hover {
+table .delete-toggle:hover {
   background-color: #da190b;
 }
 
-th, td {
-  border: 1px solid red;
+.darkmode table .read {
+  background: #13ccfa;
+}
+
+.darkmode table .read:hover {
+  background: #61fce2;
+}
+
+.darkmode table .not-read {
+  background-color: #aaa;
+}
+
+.darkmode table .not-read:hover {
+  background-color: #ccc;
+}
+
+td {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  font-weight: 400;
+  word-break: break-all;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+th:first-child {
+  width: 40%;
+  max-width: 400px;
+}
+
+th:last-child {
+  width: 15%;
 }
 
 footer {
@@ -313,6 +381,13 @@ footer img {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 200%;
+  }
+  header {
+    margin-left: 0rem;
+  }
+  main {
+    margin-left: -1rem;
+    margin-right: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

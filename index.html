@@ -19,7 +19,10 @@
                     light_mode
                 </i>
             </button>
-            <h1>Library</h1>
+            <div>
+                <h1>Library</h1>
+                <p>track your reading / saved through local storage</p>
+            </div>
         </header>
         <main>
             <form class="book-form" action="" method="get">
@@ -34,7 +37,7 @@
                     </div>
                     <div class="form-item">
                         <label for="pages">Pages</label>
-                        <input type="text" id="pages" name="pages">
+                        <input type="number" id="pages" name="pages">
                     </div>
                     <div class="form-item">
                         <label for="read">Status</label>
@@ -54,7 +57,7 @@
                         <th>Book</th>
                         <th>Author</th>
                         <th>Pages</th>
-                        <th>Read</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody class="table">
